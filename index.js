@@ -1,8 +1,8 @@
 const express = require("express");
 const dotenv = require("dotenv");
-const { connectDb } = require("./src/04Database/users.db");
-const userRoute = require("./src/03Routes/user.route");
-const adminRoute = require("./src/03Routes/admin.route");
+const { connectDb } = require("./src/database/users.db");
+const userRoute = require("./src/routes/user.route");
+const adminRoute = require("./src/routes/admin.route");
 dotenv.config()
 
 const app = express();
@@ -12,7 +12,7 @@ connectDb();
 app.use(express.json());
 app.get("/", (req, res) => {
     res.status(200).json({
-        message: "Welcome to HALAT powered by PROVIDUS BANK "
+        message: "Welcome to HANDY BANK APP powered by PROVIDUS BANK "
     });
 });
 

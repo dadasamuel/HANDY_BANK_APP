@@ -6,7 +6,7 @@ const validateUserSignup = joi.object({
     emailAddress: joi.string().required().email({ minDomainSegments: 2, tlds: { allow: ["com", "net", "org"] } }),
     phoneNumber: joi.string().required(),
     password: joi.string().required().min(5).max(12).pattern(new RegExp("^[a-zA-Z0-9]{3,30}$")),
-    role: joi.string().required(),
+    role: joi.string(),
 })
 
 const validateUserLogin = joi.object({
