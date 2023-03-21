@@ -8,7 +8,7 @@ exports.connectDb = async () => {
             useUnifiedTopology: true,
             useNewUrlParser: true,
         })
-        console.log("connected to HALAT DB")
+        console.log("connected to HANDY BANK DB")
     } catch (error) {
         console.log(error);
     }
