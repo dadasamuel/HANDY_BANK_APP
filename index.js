@@ -20,5 +20,5 @@ app.use("/api", userRoute)
 app.use("/api", adminRoute)
 
 app.listen(port, () => {
-    console.log(`🚀🚀 server up and running on port ${port}`)
+    console.log(`🚀🚀 server up and running on port: ${port}`)
 });
