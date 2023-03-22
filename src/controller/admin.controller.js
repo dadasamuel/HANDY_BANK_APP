@@ -24,7 +24,7 @@ exports.blockAUser = async (req, res) => {
             })
         }
         if (user.isBlocked == true) {
-            return res.status(404).json({
+            return res.status(403).json({
                 message: `User with emailAddress: ${user.emailAddress} is blocked already`
             })
         }

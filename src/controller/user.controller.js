@@ -51,7 +51,7 @@ exports.login = async (req, res) => {
         await validateUserLogin.validateAsync(req.body)
         const user = await User.findOne({ phoneNumber })
         if (!user) {
-            return res.status(401).json({
+            return res.status(404).json({
                 message: "User does not exist"
             })
         }
