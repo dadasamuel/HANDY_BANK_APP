@@ -11,9 +11,7 @@ const port = process.env.PORT
 connectDb();
 app.use(express.json());
 app.get("/", (req, res) => {
-    res.status(200).json({
-        message: "Welcome to HANDY BANK APP powered by PROVIDUS BANK "
-    });
+        res.send("Welcome to HANDY BANK APP powered by PROVIDUS BANK")
 });
 
 app.use("/api", userRoute)
